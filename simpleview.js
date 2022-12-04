@@ -18,9 +18,6 @@ function fixInCenter() {
         element.setAttribute('scale', scale);
         element.style.transformOrigin = '';
         sv_diversion = {x: 0, y: 0};
-        setTimeout(() => {
-            element.style.transition = `transform 0.2s ease-out`;
-        }, 1)
     });
 };
 
