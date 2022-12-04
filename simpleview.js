@@ -79,11 +79,7 @@ function simpleViewInit(element) {
                 let scale_diff;
                 let new_distance = calcDist(touch[0], touch[1])
                 let old_distance = calcDist(stored_touch[0], stored_touch[1])
-                if (new_distance > old_distance) {
-                    scale_diff = 1.1;
-                } else {
-                    scale_diff = 0.9;
-                };
+                scale_diff = new_distance / old_distance;
                 let old_scale = parseFloat(element.getAttribute('scale'));
                 let scale = old_scale * scale_diff;
                 element.setAttribute('scale', scale);
